@@ -1,5 +1,9 @@
 # Pattern Matching
 
+Pattern match is the core of the Elixir language. It will be used everywhere and it's the most fundamental concept to programming on it. 
+
+## Notes
+
 - `=` is the _match operator_, not assignment
 - If the left-hand side is a variable, and the right-hand is a literal, Elixir will match the value of the right to the left side.
 - If the form of the two values matches, so the left side is equal to the right side
@@ -26,5 +30,5 @@
 - `a = 2`
 - `^a = 1` <- match error: `1` don't matches with `2`
 
-## Notes
+## Quotes
 - _Joe Armstrong, Erlang’s creator, compares the equals sign in Erlang to that used in algebra. When you write the equation x = a + 1, you are not assigning the value of a + 1 to x. Instead you’re simply asserting that the expressions x and a + 1 have the same value. If you know the value of x, you can work out the value of a, and vice versa._
