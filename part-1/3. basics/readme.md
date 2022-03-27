@@ -102,4 +102,10 @@
 - `number < atom < reference < function < port < pid < tuple < map < list < binary`
 - Booleans operators: `a or b`, `a and b`, `not a`
 - Relaxed Boolean operators, accepted any type: `a || b`, `a && b`, `!a`
-
+- Arithmetic operators: `+`, `-`, `*`, `/`, `div`, `rem`
+- Integer division yields a floating-point result. Use `div(a,b)` to get an integer. 
+- `rem` is the _remainder_ operator. It is called as a function `rem(11, 3) => 2`
+- Join operators: `binary1 <> binary2` works on strings too
+- Variables are scoped inside the function
+- _with_ create a new scope for variables that don't affect function's scope.
+- If you use _<-_ instead of _=_ in a _with_ expression, it performs a match, but if it fails it returns the value that couldn’t be matched.
