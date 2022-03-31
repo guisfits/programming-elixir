@@ -35,4 +35,7 @@
 - With `alias` syntax you can cut down typing
 - `alias My.Other.Module.Parser` and now you can just use `Parser.func()` 
 - A variation of this is using `...Parser, as: MyParserName` or where you want to import more than one module with same previous name, just use `alias My.Other.Module.{Parser, Runner}`
-
+- Elixir's module can have metadata called _attribute_. The syntax is given by `@attribute_name value`. You can access this attributes inside functions using `@attribute_name`. 
+- These attributes are not variables in the conventional sense. Use them for configuration and metadata only
+- Modules name in Elixir are converted prepending _Elixir_. So module `IO` is actully `Elixir.IO`. We can use this as string to: `"Elixir.IO".puts 123` >> `123` - or use as variable `my_io = "Elixir.IO"` >> `my_io.puts 123` >> `123`
+- We can call Erlang modules and functions using atom's syntax. `:timer.tc` calls Erlang's timer module
