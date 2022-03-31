@@ -22,4 +22,17 @@
 1. `​def​ func(p1, p2 \\ 2, p3 \\ 3, p4)`
 2. `​def​ func(p1, p2)`
 - Elixir can define a match for those and will raise a `Compiler Error`
+- The pipe-operator `|>` works connecting one function to another
+- It pass the response of the last function executed to the next. This way, you don't need create a variable always and pass to the next function, also, it's make explicit that you are transforming data. 
+- Modules wraps your functions
+- You can define a module inside another module, but, is the same as you define in another file with `.` split the name. 
+- A directive in a module is _lexically scoped_ - it takes effect from the place you wrote it until the end of the module.
+- `import` directive bring functions and macros imported module to your module. 
+- The full syntax is `​  import Module [, only:|except: ]`
+- Write `only` and `expect` when you want to specify functions and macros to import
+- An example: `​  ​import​ List, ​only:​ [ ​flatten:​ 1, ​duplicate:​ 2 ]`
+- Alternatively, you can give only: one of the atoms `:functions` or `:macro`, and import will bring in only functions or macros.
+- With `alias` syntax you can cut down typing
+- `alias My.Other.Module.Parser` and now you can just use `Parser.func()` 
+- A variation of this is using `...Parser, as: MyParserName` or where you want to import more than one module with same previous name, just use `alias My.Other.Module.{Parser, Runner}`
 
